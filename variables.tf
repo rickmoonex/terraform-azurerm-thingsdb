@@ -80,6 +80,13 @@ variable "http_api" {
   description = "API Settings for ThingsDB."
 }
 
+variable "caddy_image" {
+  type        = string
+  description = "The docker image to use for Caddy. Defaults to `caddy:2.6` if left empty."
+  nullable    = true
+  default     = null
+}
+
 variable "storage_account_name" {
   type        = string
   description = "The name to give to the ThingsDB data storage account. If left empty a dynamic name will be generated."

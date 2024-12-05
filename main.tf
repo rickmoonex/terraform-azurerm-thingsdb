@@ -110,7 +110,7 @@ resource "azurerm_container_group" "containers" {
     for_each = var.http_api.enable == true ? [true] : []
     content {
       name   = "caddy-proxy"
-      image  = "thisismytestregistry.azurecr.io/caddy:2.6"
+      image  = var.caddy_image != null ? var.caddy_image : "caddy:2.6"
       cpu    = 1
       memory = 1
 
