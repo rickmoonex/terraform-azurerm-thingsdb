@@ -1,0 +1,6 @@
+https://${fqdn} {
+  %{ if ws_enable == true }
+  reverse_proxy /ws localhost:${ws_port}
+  %{ endif }
+  reverse_proxy http://localhost:${port}
+}
