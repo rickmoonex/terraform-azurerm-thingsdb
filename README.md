@@ -20,7 +20,7 @@ resource "azurerm_resource_group" "rg" {
 
 module "thingsdb" {
   source  = "rickmoonex/thingsdb/azurerm"
-  version = "1.0.0"
+  version = "1.1.0"
 
   name = "mythingsdbdev"
   resource_group = azurerm_resource_group.rg
